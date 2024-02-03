@@ -1,0 +1,404 @@
+// DESKTOP START
+@media screen and (min-width: 1430px) {
+  body {
+    background-color: $bg-bluegray;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+    width: 100%;
+
+    // SIDE BLOCK START
+    aside {
+      height: 100vh;
+      width: 310px;
+      background-color: $bg-white;
+      padding: 25px 28px 40px;
+      display: flex;
+      flex-flow: column nowrap;
+      position: relative;
+      justify-content: start;
+
+      // MOBILE MENU TOGGLER START
+      .mobileMenuTogglerBox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: none;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      // MOBILE MENU TOGGLER END
+
+      // LOGO START
+      .logoBox {
+        width: 220px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 30px;
+        &_link {
+          text-decoration: none;
+          width: 185px;
+          display: flex;
+          align-items: center;
+          &_icon {
+            width: 37px;
+            height: 37px;
+            margin-right: 5px;
+          }
+          &_name {
+            font-weight: bold;
+            font-size: 27px;
+            color: $c-black;
+            margin-right: 5px;
+          }
+        }
+        &_version {
+          color: $c-gray;
+          font-size: 10px;
+          align-self: flex-end;
+          line-height: 28px;
+        }
+      }
+      // LOGO END
+
+      // MENU START
+      .menuBox {
+        &_menu {
+          &_linkItem {
+            width: 250px;
+            height: 46px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            &_link {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: baseline;
+              align-items: center;
+              text-decoration: none;
+              padding: 11px;
+              .itemIcon {
+                margin-right: 14px;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+              span {
+                width: 200px;
+                color: $c-gray;
+              }
+              .arrowToRight {
+                width: 16px;
+                height: 16px;
+                background-image: url("../images/chevron-right.png");
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+              .empty {
+                background-image: none !important;
+              }
+            }
+          }
+          &_linkItem:hover {
+            background-color: $bg-violet;
+          }
+          &_linkItem:hover span {
+            color: $c-white;
+          }
+          &_linkItem:hover .arrowToRight {
+            background-image: url("../images/chevron-right_hover.png");
+          }
+
+          // dashboard icon start
+          &_linkItem:nth-child(1) .itemIcon {
+            background-image: url("../images/key-square.png");
+          }
+          &_linkItem:nth-child(1):hover .itemIcon {
+            background-image: url("../images/key-square_hover.png");
+          }
+          // dashboard icon end
+
+          // product icon start
+          &_linkItem:nth-child(2) .itemIcon {
+            background-image: url("../images/3d-square.png");
+          }
+          &_linkItem:nth-child(2):hover .itemIcon {
+            background-image: url("../images/3d-square_hover.png");
+          }
+          // product icon end
+
+          // customer icon start
+          &_linkItem:nth-child(3) .itemIcon {
+            background-image: url("../images/user-square.png");
+          }
+          &_linkItem:nth-child(3):hover .itemIcon {
+            background-image: url("../images/user-square_hover.png");
+          }
+          // customer icon end
+
+          // income icon start
+          &_linkItem:nth-child(4) .itemIcon {
+            background-image: url("../images/wallet-money.png");
+          }
+          &_linkItem:nth-child(4):hover .itemIcon {
+            background-image: url("../images/wallet-money_hover.png");
+          }
+          // income icon end
+
+          // promote icon start
+          &_linkItem:nth-child(5) .itemIcon {
+            background-image: url("../images/discount-shape.png");
+          }
+          &_linkItem:nth-child(5):hover .itemIcon {
+            background-image: url("../images/discount-shape_hover.png");
+          }
+          // promote icon end
+
+          // help icon start
+          &_linkItem:nth-child(6) .itemIcon {
+            background-image: url("../images/message-question.png");
+          }
+          &_linkItem:nth-child(6):hover .itemIcon {
+            background-image: url("../images/message-question_hover.png");
+          }
+          // help icon end
+        }
+      }
+      // MENU END
+
+      // ACCOUNT BOX START
+      .accountBox {
+        width: 155px;
+        height: 45px;
+        position: absolute;
+        bottom: 40px;
+        &_accountLink {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          text-decoration: none;
+          &_photo {
+            height: 45px;
+            width: 45px;
+            margin-right: 12px;
+          }
+          &_accountName {
+            color: $c-black;
+            font-weight: bold;
+            font-size: 14px;
+            width: 100px;
+            margin-bottom: 5px;
+          }
+          &_accountRole {
+            color: $c-gray;
+            font-size: 12px;
+            width: 100px;
+          }
+        }
+      }
+      // ACCOUNT BOX END
+    }
+    // SIDE BLOCK END
+
+    // SECTION BLOCK START
+    section {
+      padding: 30px 70px 0;
+      width: 100%;
+      // GREETINGS BOX START
+      .greetingsBox {
+        height: 36px;
+        margin-bottom: 10px;
+        &_hi {
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+      // GREETINGS BOX END
+
+      // DASHBOARD BOX START
+      .dashboardBox {
+        background-color: $bg-white;
+        max-height: 700px;
+        border-radius: 8px;
+        padding: 20px 0 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        font-size: 14px;
+        // dashboard TOP part START
+        &_top {
+          @include w_h(100%, 60px);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 30px;
+          &_left {
+            h3 {
+              font-size: 22px;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+            span {
+              color: $c-lightgreen;
+            }
+          }
+          &_right {
+            label {
+              position: relative;
+              input {
+                @include w_h(216px, 40px);
+                background-color: $bg-bluegray;
+                border: 2px solid #e7e7e7;
+                border-radius: 8px;
+                padding-left: 40px;
+              }
+              img {
+                @include w_h(24px, 24px);
+                display: block;
+                position: absolute;
+                top: -2px;
+                left: 10px;
+              }
+            }
+            label:hover,
+            input:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        // dashboard TOP part START
+
+        // dashboard MIDDLE part START
+        &_middle {
+          width: 100%;
+          table {
+            width: 100%;
+            // table HEAD START
+            thead {
+              border-bottom: 2px solid $bg-darkwhite;
+              tr {
+                th {
+                  color: $c-gray;
+                  padding: 15px 0;
+                  text-align: left;
+                }
+                th:nth-of-type(1),
+                th:nth-last-of-type(1) {
+                  width: 30px;
+                }
+                th:nth-last-of-type(2) {
+                  text-align: center;
+                }
+                th:nth-last-of-type(2) {
+                  width: 80px;
+                }
+              }
+            }
+            // table HEAD END
+
+            // table BODY START
+            tbody {
+              tr {
+                td {
+                  padding: 17px 0 0;
+                  height: 50px;
+                  font-weight: 500;
+                  border-bottom: 2px solid $bg-darkwhite;
+                }
+                td:nth-of-type(1),
+                td:nth-last-of-type(1) {
+                  border: none;
+                  width: 30px;
+                }
+                .userStatusStyle {
+                  text-align: center;
+                  &-green {
+                    border-radius: 8px;
+                    padding: 5px 15px;
+                    background-color: $bg-lightgreen;
+                    color: $c-green;
+                    border: 2px solid $c-green;
+                  }
+                  &-red {
+                    border-radius: 8px;
+                    padding: 5px 10px;
+                    background-color: $bg-lightred;
+                    color: $c-red;
+                    border: 2px solid $c-red;
+                  }
+                }
+              }
+            }
+            // table BODY END
+          }
+        }
+        // dashboard MIDDLE part START
+
+        // dashboard BOTTOM part START
+        &_bottom {
+          margin-top: 20px;
+          padding: 0 30px;
+          font-size: 14px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          &_left {
+            p {
+              color: $c-gray;
+            }
+          }
+          &_right {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            button {
+              background-color: $bg-darkwhite;
+              font-weight: bold;
+              @include w_h(25px, 25px);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: none;
+              border-radius: 4px;
+            }
+            button:nth-of-type(1),
+            button:nth-last-of-type(1) {
+              padding-bottom: 4px;
+            }
+            button:hover {
+              cursor: pointer;
+              background-color: $bg-violet;
+              color: $c-white;
+            }
+            button:disabled {
+              cursor: default;
+              background-color: $bg-gray;
+              color: $c-black;
+            }
+            .current-page {
+              background-color: $bg-violet;
+              color: $c-white;
+            }
+            span {
+              text-align: center;
+              line-height: 25px;
+            }
+          }
+        }
+        // dashboard BOTTOM part START
+      }
+      // DASHBOARD BOX END
+    }
+    // SECTION BLOCK END
+  }
+}
+// DESKTOP END

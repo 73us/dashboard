@@ -1,0 +1,16 @@
+@import "./base/base";
+@import "./base/variables";
+@import "./base/mixins";
+@import "../styles/devices/mobile";
+@import "../styles/devices/tablet";
+@import "../styles/devices/medium";
+@import "../styles/devices/desktop";
+@import "../styles/devices/desktop_large";
+
+body {
+  background-color: $bg-bluegray;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  width: 100%;
+}

@@ -1,0 +1,1872 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .mobileMenuTogglerBox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+  }
+  .mobileMenuTogglerBox img {
+    width: 40px;
+    height: 40px;
+  }
+  .mobileMenuTogglerBox:hover + aside,
+  aside:hover {
+    width: 200px;
+  }
+  aside {
+    border-right: 2px solid #eeeeee;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    justify-content: start;
+    overflow: hidden;
+    transition: width 0.5s;
+    z-index: 11;
+  }
+  aside .logoBox {
+    width: 220px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px 0 30px 26px;
+  }
+  aside .logoBox_link {
+    text-decoration: none;
+    width: 130px;
+    display: flex;
+    align-items: center;
+  }
+  aside .logoBox_link_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  aside .logoBox_link_name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  aside .logoBox_version {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    line-height: 20px;
+  }
+  aside .menuBox {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  aside .menuBox_menu_linkItem {
+    width: 170px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  aside .menuBox_menu_linkItem_link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px;
+  }
+  aside .menuBox_menu_linkItem_link .itemIcon {
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link span {
+    width: 100px;
+    color: #838383;
+  }
+  aside .menuBox_menu_linkItem_link .arrowToRight {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/chevron-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link .empty {
+    background-image: none !important;
+  }
+  aside .menuBox_menu_linkItem:hover {
+    background-color: #5932ea;
+  }
+  aside .menuBox_menu_linkItem:hover span {
+    color: #ffffff;
+  }
+  aside .menuBox_menu_linkItem:hover .arrowToRight {
+    background-image: url("../images/chevron-right_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1) .itemIcon {
+    background-image: url("../images/key-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1):hover .itemIcon {
+    background-image: url("../images/key-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2) .itemIcon {
+    background-image: url("../images/3d-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2):hover .itemIcon {
+    background-image: url("../images/3d-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3) .itemIcon {
+    background-image: url("../images/user-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3):hover .itemIcon {
+    background-image: url("../images/user-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4) .itemIcon {
+    background-image: url("../images/wallet-money.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4):hover .itemIcon {
+    background-image: url("../images/wallet-money_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5) .itemIcon {
+    background-image: url("../images/discount-shape.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5):hover .itemIcon {
+    background-image: url("../images/discount-shape_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6) .itemIcon {
+    background-image: url("../images/message-question.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6):hover .itemIcon {
+    background-image: url("../images/message-question_hover.png");
+  }
+  aside .accountBox {
+    width: 155px;
+    height: 45px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  aside .accountBox_accountLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+  }
+  aside .accountBox_accountLink_photo {
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+  }
+  aside .accountBox_accountLink_accountName {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  aside .accountBox_accountLink_accountRole {
+    color: #838383;
+    font-size: 12px;
+    width: 100px;
+  }
+  section {
+    padding: 18px 0 0;
+    width: 100%;
+  }
+  section .greetingsBox {
+    height: 36px;
+    padding-left: 60px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+  }
+  section .greetingsBox_hi {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  section .dashboardBox {
+    margin-top: -70px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  section .dashboardBox_top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  section .dashboardBox_top_left {
+    margin-top: 50px;
+    position: relative;
+    padding-left: 10px;
+  }
+  section .dashboardBox_top_left h3 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  section .dashboardBox_top_left span {
+    font-size: 12px;
+    color: #16C098;
+  }
+  section .dashboardBox_top_right label {
+    position: relative;
+  }
+  section .dashboardBox_top_right label input {
+    width: 0;
+    height: 40px;
+    background-color: #fafbff;
+    border: none;
+    border-radius: 8px;
+    transition: width 0.5s;
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    overflow: hidden;
+    padding: 0;
+    outline-color: #eeeeee;
+  }
+  section .dashboardBox_top_right label img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 1;
+    transition-delay: 1s;
+  }
+  section .dashboardBox_top_right label:hover > input,
+  section .dashboardBox_top_right input:hover {
+    width: 265px;
+    border: 2px solid #e7e7e7;
+    padding: 5px;
+  }
+  section .dashboardBox_middle {
+    min-width: 320px;
+    overflow: scroll;
+  }
+  section .dashboardBox_middle table {
+    font-size: 12px;
+  }
+  section .dashboardBox_middle table thead {
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table thead tr th {
+    color: #838383;
+    padding: 10px 0 5px;
+    text-align: left;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(1),
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(1) {
+    width: 10px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    text-align: center;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    width: 10px;
+  }
+  section .dashboardBox_middle table tbody tr td {
+    min-width: 100px;
+    padding: 15px 0 0;
+    height: 40px;
+    font-weight: 500;
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(1),
+  section .dashboardBox_middle table tbody tr td:nth-last-of-type(1) {
+    border: none;
+    min-width: 10px;
+    width: 10px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle {
+    text-align: center;
+    width: 40px;
+    min-width: 40px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-green {
+    border-radius: 4px;
+    padding: 3px 6px;
+    background-color: rgba(22, 192, 152, 0.38);
+    color: #00B087;
+    border: 1px solid #00B087;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-red {
+    border-radius: 4px;
+    padding: 3px 2px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    border: 1px solid #DF0404;
+  }
+  section .dashboardBox_bottom {
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .dashboardBox_bottom_left p {
+    color: #838383;
+  }
+  section .dashboardBox_bottom_right {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+  }
+  section .dashboardBox_bottom_right button {
+    font-size: 10px;
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+  }
+  section .dashboardBox_bottom_right button:nth-of-type(1),
+  section .dashboardBox_bottom_right button:nth-last-of-type(1) {
+    padding-bottom: 2px;
+  }
+  section .dashboardBox_bottom_right button:hover {
+    cursor: pointer;
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right button:disabled {
+    cursor: default;
+    background-color: rgba(179, 179, 179, 0.1568627451);
+    color: #000000;
+  }
+  section .dashboardBox_bottom_right .current-page {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right span {
+    text-align: center;
+    line-height: 15px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 760px) {
+  .mobileMenuTogglerBox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+  }
+  .mobileMenuTogglerBox img {
+    width: 40px;
+    height: 40px;
+  }
+  .mobileMenuTogglerBox:hover + aside,
+  aside:hover {
+    width: 280px;
+  }
+  aside {
+    border-right: 2px solid #eeeeee;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    justify-content: start;
+    overflow: hidden;
+    transition: width 1s;
+    z-index: 11;
+  }
+  aside .logoBox {
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px 0 30px 26px;
+  }
+  aside .logoBox_link {
+    text-decoration: none;
+    width: 185px;
+    display: flex;
+    align-items: center;
+  }
+  aside .logoBox_link_icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 5px;
+  }
+  aside .logoBox_link_name {
+    font-weight: bold;
+    font-size: 27px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  aside .logoBox_version {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    line-height: 28px;
+  }
+  aside .menuBox {
+    padding-left: 15px;
+  }
+  aside .menuBox_menu_linkItem {
+    width: 250px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  aside .menuBox_menu_linkItem_link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px;
+  }
+  aside .menuBox_menu_linkItem_link .itemIcon {
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link span {
+    width: 200px;
+    color: #838383;
+  }
+  aside .menuBox_menu_linkItem_link .arrowToRight {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/chevron-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link .empty {
+    background-image: none !important;
+  }
+  aside .menuBox_menu_linkItem:hover {
+    background-color: #5932ea;
+  }
+  aside .menuBox_menu_linkItem:hover span {
+    color: #ffffff;
+  }
+  aside .menuBox_menu_linkItem:hover .arrowToRight {
+    background-image: url("../images/chevron-right_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1) .itemIcon {
+    background-image: url("../images/key-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1):hover .itemIcon {
+    background-image: url("../images/key-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2) .itemIcon {
+    background-image: url("../images/3d-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2):hover .itemIcon {
+    background-image: url("../images/3d-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3) .itemIcon {
+    background-image: url("../images/user-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3):hover .itemIcon {
+    background-image: url("../images/user-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4) .itemIcon {
+    background-image: url("../images/wallet-money.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4):hover .itemIcon {
+    background-image: url("../images/wallet-money_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5) .itemIcon {
+    background-image: url("../images/discount-shape.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5):hover .itemIcon {
+    background-image: url("../images/discount-shape_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6) .itemIcon {
+    background-image: url("../images/message-question.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6):hover .itemIcon {
+    background-image: url("../images/message-question_hover.png");
+  }
+  aside .accountBox {
+    width: 155px;
+    height: 45px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  aside .accountBox_accountLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+  }
+  aside .accountBox_accountLink_photo {
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+  }
+  aside .accountBox_accountLink_accountName {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  aside .accountBox_accountLink_accountRole {
+    color: #838383;
+    font-size: 12px;
+    width: 100px;
+  }
+  section {
+    padding: 18px 0 0;
+    width: 100%;
+  }
+  section .greetingsBox {
+    height: 36px;
+    padding-left: 60px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  section .greetingsBox_hi {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  section .dashboardBox {
+    margin-top: -70px;
+    background-color: #ffffff;
+    max-height: 700px;
+    border-radius: 8px;
+    padding: 20px 0 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  section .dashboardBox_top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  section .dashboardBox_top_left {
+    margin-top: 40px;
+  }
+  section .dashboardBox_top_left h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  section .dashboardBox_top_left span {
+    color: #16C098;
+  }
+  section .dashboardBox_top_right label {
+    position: relative;
+  }
+  section .dashboardBox_top_right label input {
+    width: 150px;
+    height: 40px;
+    background-color: #fafbff;
+    border: 2px solid #e7e7e7;
+    border-radius: 8px;
+    padding-left: 40px;
+  }
+  section .dashboardBox_top_right label img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  section .dashboardBox_top_right label:hover,
+  section .dashboardBox_top_right input:hover {
+    cursor: pointer;
+  }
+  section .dashboardBox_middle {
+    width: 100%;
+  }
+  section .dashboardBox_middle table {
+    width: 100%;
+    font-size: 10px;
+  }
+  section .dashboardBox_middle table thead {
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table thead tr th {
+    color: #838383;
+    padding: 15px 0;
+    text-align: left;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(1),
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(1) {
+    width: 10px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(6) {
+    width: 50px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    text-align: center;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    width: 40px;
+  }
+  section .dashboardBox_middle table tbody tr td {
+    max-width: 100px;
+    padding: 15px 0 0;
+    height: 40px;
+    font-weight: 500;
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(1),
+  section .dashboardBox_middle table tbody tr td:nth-last-of-type(1) {
+    border: none;
+    width: 10px;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(6) {
+    padding: 0 0 10px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle {
+    text-align: center;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-green {
+    border-radius: 5px;
+    padding: 2px 6px;
+    background-color: rgba(22, 192, 152, 0.38);
+    color: #00B087;
+    border: 2px solid #00B087;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-red {
+    border-radius: 5px;
+    padding: 2px 2px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    border: 2px solid #DF0404;
+  }
+  section .dashboardBox_bottom {
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .dashboardBox_bottom_left p {
+    color: #838383;
+  }
+  section .dashboardBox_bottom_right {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+  section .dashboardBox_bottom_right button {
+    font-size: 10px;
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+  }
+  section .dashboardBox_bottom_right button:nth-of-type(1),
+  section .dashboardBox_bottom_right button:nth-last-of-type(1) {
+    padding-bottom: 4px;
+  }
+  section .dashboardBox_bottom_right button:hover {
+    cursor: pointer;
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right button:disabled {
+    cursor: default;
+    background-color: rgba(179, 179, 179, 0.1568627451);
+    color: #000000;
+  }
+  section .dashboardBox_bottom_right .current-page {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right span {
+    text-align: center;
+    line-height: 15px;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 1020px) {
+  .mobileMenuTogglerBox {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+  }
+  .mobileMenuTogglerBox img {
+    width: 40px;
+    height: 40px;
+  }
+  .mobileMenuTogglerBox:hover + aside,
+  aside:hover {
+    width: 280px;
+  }
+  aside {
+    border-right: 2px solid #eeeeee;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    justify-content: start;
+    overflow: hidden;
+    transition: width 1s;
+    z-index: 11;
+  }
+  aside .logoBox {
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px 0 30px 25px;
+  }
+  aside .logoBox_link {
+    text-decoration: none;
+    width: 185px;
+    display: flex;
+    align-items: center;
+  }
+  aside .logoBox_link_icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 5px;
+  }
+  aside .logoBox_link_name {
+    font-weight: bold;
+    font-size: 27px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  aside .logoBox_version {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    line-height: 28px;
+  }
+  aside .menuBox {
+    padding-left: 15px;
+  }
+  aside .menuBox_menu_linkItem {
+    width: 250px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  aside .menuBox_menu_linkItem_link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px;
+  }
+  aside .menuBox_menu_linkItem_link .itemIcon {
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link span {
+    width: 200px;
+    color: #838383;
+  }
+  aside .menuBox_menu_linkItem_link .arrowToRight {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/chevron-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link .empty {
+    background-image: none !important;
+  }
+  aside .menuBox_menu_linkItem:hover {
+    background-color: #5932ea;
+  }
+  aside .menuBox_menu_linkItem:hover span {
+    color: #ffffff;
+  }
+  aside .menuBox_menu_linkItem:hover .arrowToRight {
+    background-image: url("../images/chevron-right_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1) .itemIcon {
+    background-image: url("../images/key-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1):hover .itemIcon {
+    background-image: url("../images/key-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2) .itemIcon {
+    background-image: url("../images/3d-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2):hover .itemIcon {
+    background-image: url("../images/3d-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3) .itemIcon {
+    background-image: url("../images/user-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3):hover .itemIcon {
+    background-image: url("../images/user-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4) .itemIcon {
+    background-image: url("../images/wallet-money.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4):hover .itemIcon {
+    background-image: url("../images/wallet-money_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5) .itemIcon {
+    background-image: url("../images/discount-shape.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5):hover .itemIcon {
+    background-image: url("../images/discount-shape_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6) .itemIcon {
+    background-image: url("../images/message-question.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6):hover .itemIcon {
+    background-image: url("../images/message-question_hover.png");
+  }
+  aside .accountBox {
+    width: 155px;
+    height: 45px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  aside .accountBox_accountLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+  }
+  aside .accountBox_accountLink_photo {
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+  }
+  aside .accountBox_accountLink_accountName {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  aside .accountBox_accountLink_accountRole {
+    color: #838383;
+    font-size: 12px;
+    width: 100px;
+  }
+  section {
+    padding: 18px 0 0;
+    width: 100%;
+  }
+  section .greetingsBox {
+    height: 36px;
+    padding-left: 75px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  section .greetingsBox_hi {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  section .dashboardBox {
+    margin-top: -70px;
+    background-color: #ffffff;
+    max-height: 700px;
+    border-radius: 8px;
+    padding: 20px 0 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  section .dashboardBox_top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  section .dashboardBox_top_left {
+    margin-top: 40px;
+  }
+  section .dashboardBox_top_left h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  section .dashboardBox_top_left span {
+    color: #16C098;
+  }
+  section .dashboardBox_top_right label {
+    position: relative;
+  }
+  section .dashboardBox_top_right label input {
+    width: 350px;
+    height: 40px;
+    background-color: #fafbff;
+    border: 2px solid #e7e7e7;
+    border-radius: 8px;
+    padding-left: 40px;
+  }
+  section .dashboardBox_top_right label img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  section .dashboardBox_top_right label:hover,
+  section .dashboardBox_top_right input:hover {
+    cursor: pointer;
+  }
+  section .dashboardBox_middle {
+    width: 100%;
+  }
+  section .dashboardBox_middle table {
+    width: 100%;
+    font-size: 10px;
+  }
+  section .dashboardBox_middle table thead {
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table thead tr th {
+    color: #838383;
+    padding: 15px 0;
+    text-align: left;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(1),
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(1) {
+    width: 30px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(6) {
+    width: 100px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    text-align: center;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    width: 40px;
+  }
+  section .dashboardBox_middle table tbody tr td {
+    max-width: 100px;
+    padding: 15px 0 0;
+    height: 40px;
+    font-weight: 500;
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(1),
+  section .dashboardBox_middle table tbody tr td:nth-last-of-type(1) {
+    border: none;
+    width: 30px;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(6) {
+    padding: 0 0 10px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle {
+    text-align: center;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-green {
+    border-radius: 6px;
+    padding: 2px 6px;
+    background-color: rgba(22, 192, 152, 0.38);
+    color: #00B087;
+    border: 2px solid #00B087;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-red {
+    border-radius: 6px;
+    padding: 2px 2px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    border: 2px solid #DF0404;
+  }
+  section .dashboardBox_bottom {
+    margin-top: 20px;
+    padding: 0 30px;
+    font-size: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .dashboardBox_bottom_left p {
+    color: #838383;
+  }
+  section .dashboardBox_bottom_right {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+  section .dashboardBox_bottom_right button {
+    font-size: 10px;
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+  }
+  section .dashboardBox_bottom_right button:nth-of-type(1),
+  section .dashboardBox_bottom_right button:nth-last-of-type(1) {
+    padding-bottom: 4px;
+  }
+  section .dashboardBox_bottom_right button:hover {
+    cursor: pointer;
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right button:disabled {
+    cursor: default;
+    background-color: rgba(179, 179, 179, 0.1568627451);
+    color: #000000;
+  }
+  section .dashboardBox_bottom_right .current-page {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right span {
+    text-align: center;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 1430px) and (min-width: 1021px) {
+  .mobileMenuTogglerBox {
+    display: none;
+  }
+  aside {
+    height: 100vh;
+    width: 310px;
+    background-color: #ffffff;
+    padding: 25px 28px 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+  }
+  aside .logoBox {
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 30px;
+    margin: 0 0 30px 7px;
+  }
+  aside .logoBox_link {
+    text-decoration: none;
+    width: 185px;
+    display: flex;
+    align-items: center;
+  }
+  aside .logoBox_link_icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 5px;
+  }
+  aside .logoBox_link_name {
+    font-weight: bold;
+    font-size: 27px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  aside .logoBox_version {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    line-height: 28px;
+  }
+  aside .menuBox_menu_linkItem {
+    width: 250px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  aside .menuBox_menu_linkItem_link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px;
+  }
+  aside .menuBox_menu_linkItem_link .itemIcon {
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link span {
+    width: 200px;
+    color: #838383;
+  }
+  aside .menuBox_menu_linkItem_link .arrowToRight {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/chevron-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link .empty {
+    background-image: none !important;
+  }
+  aside .menuBox_menu_linkItem:hover {
+    background-color: #5932ea;
+  }
+  aside .menuBox_menu_linkItem:hover span {
+    color: #ffffff;
+  }
+  aside .menuBox_menu_linkItem:hover .arrowToRight {
+    background-image: url("../images/chevron-right_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1) .itemIcon {
+    background-image: url("../images/key-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1):hover .itemIcon {
+    background-image: url("../images/key-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2) .itemIcon {
+    background-image: url("../images/3d-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2):hover .itemIcon {
+    background-image: url("../images/3d-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3) .itemIcon {
+    background-image: url("../images/user-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3):hover .itemIcon {
+    background-image: url("../images/user-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4) .itemIcon {
+    background-image: url("../images/wallet-money.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4):hover .itemIcon {
+    background-image: url("../images/wallet-money_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5) .itemIcon {
+    background-image: url("../images/discount-shape.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5):hover .itemIcon {
+    background-image: url("../images/discount-shape_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6) .itemIcon {
+    background-image: url("../images/message-question.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6):hover .itemIcon {
+    background-image: url("../images/message-question_hover.png");
+  }
+  aside .accountBox {
+    width: 155px;
+    height: 45px;
+    position: absolute;
+    bottom: 20px;
+  }
+  aside .accountBox_accountLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+  }
+  aside .accountBox_accountLink_photo {
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+  }
+  aside .accountBox_accountLink_accountName {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  aside .accountBox_accountLink_accountRole {
+    color: #838383;
+    font-size: 12px;
+    width: 100px;
+  }
+  section {
+    padding: 30px 30px 0;
+    width: 100%;
+  }
+  section .greetingsBox {
+    height: 36px;
+    margin-bottom: 10px;
+  }
+  section .greetingsBox_hi {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  section .dashboardBox {
+    background-color: #ffffff;
+    max-height: 700px;
+    border-radius: 8px;
+    padding: 15px 0 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  section .dashboardBox_top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  section .dashboardBox_top_left h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  section .dashboardBox_top_left span {
+    color: #16C098;
+  }
+  section .dashboardBox_top_right label {
+    position: relative;
+  }
+  section .dashboardBox_top_right label input {
+    width: 216px;
+    height: 30px;
+    background-color: #fafbff;
+    border: 2px solid #e7e7e7;
+    border-radius: 8px;
+    padding-left: 35px;
+  }
+  section .dashboardBox_top_right label img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 10px;
+  }
+  section .dashboardBox_top_right label:hover,
+  section .dashboardBox_top_right input:hover {
+    cursor: pointer;
+  }
+  section .dashboardBox_middle {
+    width: 100%;
+  }
+  section .dashboardBox_middle table {
+    width: 100%;
+  }
+  section .dashboardBox_middle table thead {
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table thead tr th {
+    color: #838383;
+    padding: 15px 0;
+    text-align: left;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(1),
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(1) {
+    width: 15px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    text-align: center;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    width: 60px;
+  }
+  section .dashboardBox_middle table tbody tr td {
+    padding: 11px 0 0;
+    height: 35px;
+    font-weight: 500;
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(1),
+  section .dashboardBox_middle table tbody tr td:nth-last-of-type(1) {
+    border: none;
+    width: 15px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle {
+    text-align: center;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-green {
+    border-radius: 6px;
+    padding: 2px 15px;
+    background-color: rgba(22, 192, 152, 0.38);
+    color: #00B087;
+    border: 2px solid #00B087;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-red {
+    border-radius: 6px;
+    padding: 2px 10px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    border: 2px solid #DF0404;
+  }
+  section .dashboardBox_bottom {
+    margin-top: 10px;
+    padding: 0 30px;
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .dashboardBox_bottom_left p {
+    color: #838383;
+  }
+  section .dashboardBox_bottom_right {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+  section .dashboardBox_bottom_right button {
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+  }
+  section .dashboardBox_bottom_right button:nth-of-type(1),
+  section .dashboardBox_bottom_right button:nth-last-of-type(1) {
+    padding-bottom: 4px;
+  }
+  section .dashboardBox_bottom_right button:hover {
+    cursor: pointer;
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right button:disabled {
+    cursor: default;
+    background-color: rgba(179, 179, 179, 0.1568627451);
+    color: #000000;
+  }
+  section .dashboardBox_bottom_right .current-page {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right span {
+    text-align: center;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 1430px) {
+  .mobileMenuTogglerBox {
+    display: none;
+  }
+  aside {
+    height: 100vh;
+    width: 310px;
+    background-color: #ffffff;
+    padding: 25px 28px 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+  }
+  aside .logoBox {
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 0 30px 7px;
+  }
+  aside .logoBox_link {
+    text-decoration: none;
+    width: 185px;
+    display: flex;
+    align-items: center;
+  }
+  aside .logoBox_link_icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 5px;
+  }
+  aside .logoBox_link_name {
+    font-weight: bold;
+    font-size: 27px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  aside .logoBox_version {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    line-height: 28px;
+  }
+  aside .menuBox_menu_linkItem {
+    width: 250px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  aside .menuBox_menu_linkItem_link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px;
+  }
+  aside .menuBox_menu_linkItem_link .itemIcon {
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link span {
+    width: 200px;
+    color: #838383;
+  }
+  aside .menuBox_menu_linkItem_link .arrowToRight {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/chevron-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  aside .menuBox_menu_linkItem_link .empty {
+    background-image: none !important;
+  }
+  aside .menuBox_menu_linkItem:hover {
+    background-color: #5932ea;
+  }
+  aside .menuBox_menu_linkItem:hover span {
+    color: #ffffff;
+  }
+  aside .menuBox_menu_linkItem:hover .arrowToRight {
+    background-image: url("../images/chevron-right_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1) .itemIcon {
+    background-image: url("../images/key-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(1):hover .itemIcon {
+    background-image: url("../images/key-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2) .itemIcon {
+    background-image: url("../images/3d-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(2):hover .itemIcon {
+    background-image: url("../images/3d-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3) .itemIcon {
+    background-image: url("../images/user-square.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(3):hover .itemIcon {
+    background-image: url("../images/user-square_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4) .itemIcon {
+    background-image: url("../images/wallet-money.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(4):hover .itemIcon {
+    background-image: url("../images/wallet-money_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5) .itemIcon {
+    background-image: url("../images/discount-shape.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(5):hover .itemIcon {
+    background-image: url("../images/discount-shape_hover.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6) .itemIcon {
+    background-image: url("../images/message-question.png");
+  }
+  aside .menuBox_menu_linkItem:nth-child(6):hover .itemIcon {
+    background-image: url("../images/message-question_hover.png");
+  }
+  aside .accountBox {
+    width: 155px;
+    height: 45px;
+    position: absolute;
+    bottom: 40px;
+  }
+  aside .accountBox_accountLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+  }
+  aside .accountBox_accountLink_photo {
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+  }
+  aside .accountBox_accountLink_accountName {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  aside .accountBox_accountLink_accountRole {
+    color: #838383;
+    font-size: 12px;
+    width: 100px;
+  }
+  section {
+    padding: 30px 70px 0;
+    width: 100%;
+  }
+  section .greetingsBox {
+    height: 36px;
+    margin-bottom: 10px;
+  }
+  section .greetingsBox_hi {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  section .dashboardBox {
+    background-color: #ffffff;
+    max-height: 700px;
+    border-radius: 8px;
+    padding: 20px 0 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  section .dashboardBox_top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+  section .dashboardBox_top_left h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  section .dashboardBox_top_left span {
+    color: #16C098;
+  }
+  section .dashboardBox_top_right label {
+    position: relative;
+  }
+  section .dashboardBox_top_right label input {
+    width: 216px;
+    height: 40px;
+    background-color: #fafbff;
+    border: 2px solid #e7e7e7;
+    border-radius: 8px;
+    padding-left: 40px;
+  }
+  section .dashboardBox_top_right label img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+  }
+  section .dashboardBox_top_right label:hover,
+  section .dashboardBox_top_right input:hover {
+    cursor: pointer;
+  }
+  section .dashboardBox_middle {
+    width: 100%;
+  }
+  section .dashboardBox_middle table {
+    width: 100%;
+  }
+  section .dashboardBox_middle table thead {
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table thead tr th {
+    color: #838383;
+    padding: 15px 0;
+    text-align: left;
+  }
+  section .dashboardBox_middle table thead tr th:nth-of-type(1),
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(1) {
+    width: 30px;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    text-align: center;
+  }
+  section .dashboardBox_middle table thead tr th:nth-last-of-type(2) {
+    width: 80px;
+  }
+  section .dashboardBox_middle table tbody tr td {
+    padding: 17px 0 0;
+    height: 50px;
+    font-weight: 500;
+    border-bottom: 2px solid #eeeeee;
+  }
+  section .dashboardBox_middle table tbody tr td:nth-of-type(1),
+  section .dashboardBox_middle table tbody tr td:nth-last-of-type(1) {
+    border: none;
+    width: 30px;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle {
+    text-align: center;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-green {
+    border-radius: 6px;
+    padding: 5px 15px;
+    background-color: rgba(22, 192, 152, 0.38);
+    color: #00B087;
+    border: 2px solid #00B087;
+  }
+  section .dashboardBox_middle table tbody tr .userStatusStyle-red {
+    border-radius: 6px;
+    padding: 5px 10px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    border: 2px solid #DF0404;
+  }
+  section .dashboardBox_bottom {
+    margin-top: 20px;
+    padding: 0 30px;
+    font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .dashboardBox_bottom_left p {
+    color: #838383;
+  }
+  section .dashboardBox_bottom_right {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+  section .dashboardBox_bottom_right button {
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+  }
+  section .dashboardBox_bottom_right button:nth-of-type(1),
+  section .dashboardBox_bottom_right button:nth-last-of-type(1) {
+    padding-bottom: 4px;
+  }
+  section .dashboardBox_bottom_right button:hover {
+    cursor: pointer;
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right button:disabled {
+    cursor: default;
+    background-color: rgba(179, 179, 179, 0.1568627451);
+    color: #000000;
+  }
+  section .dashboardBox_bottom_right .current-page {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+  section .dashboardBox_bottom_right span {
+    text-align: center;
+    line-height: 25px;
+  }
+}
+body {
+  background-color: #fafbff;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */

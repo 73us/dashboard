@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./images/site_icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- MOBILE MENU TOGGLER START -->
+    <div class="mobileMenuTogglerBox">
+        <img class="mobileMenuTogglerBox_menuIcon" src="./images/menu.png" alt="menu icon">
+    </div>
+    <!-- MOBILE MENU TOGGLER END -->
+
+    <!-- SIDE BLOCK START -->
+    <aside>
+        <!-- LOGO START -->
+        <div class="logoBox">
+            <a class="logoBox_link" href="./index.html">
+                <img src="./images/logo_icon.png" alt="dashboard icon" class="logoBox_link_icon">
+                <h1 class="logoBox_link_name">Dashboard</h1>
+            </a>
+            <span class="logoBox_version">v.01</span>
+        </div>
+        <!-- LOGO END -->
+
+        <!-- MENU START -->
+        <div class="menuBox">
+            <ul class="menuBox_menu">
+                <li class="menuBox_menu_linkItem">
+                    <a href="./index.html" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Dashboard</span>
+                        <div class="arrowToRight empty"></div>
+                    </a>
+                </li>
+                <li class="menuBox_menu_linkItem">
+                    <a href="#" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Product</span>
+                        <div class="arrowToRight"></div>
+                    </a>
+                </li>
+                <li class="menuBox_menu_linkItem">
+                    <a href="#" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Customers</span>
+                        <div class="arrowToRight"></div>
+                    </a>
+                </li>
+                <li class="menuBox_menu_linkItem">
+                    <a href="#" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Income</span>
+                        <div class="arrowToRight"></div>
+                    </a>
+                </li>
+                <li class="menuBox_menu_linkItem">
+                    <a href="#" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Promote</span>
+                        <div class="arrowToRight"></div>
+                    </a>
+                </li>
+                <li class="menuBox_menu_linkItem">
+                    <a href="#" class="menuBox_menu_linkItem_link">
+                        <div class="itemIcon"></div>
+                        <span>Help</span>
+                        <div class="arrowToRight"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- MENU END -->
+
+        <!-- ACCOUNT BOX START -->
+        <div class="accountBox">
+            <a href="#" class="accountBox_accountLink">
+                <img id="account_photo" src="./images/profile_photo.png" alt="account photo"
+                    class="accountBox_accountLink_photo">
+                <p id="account_name" class="accountBox_accountLink_accountName">Evano</p>
+                <p id="account_role" class="accountBox_accountLink_accountRole">Project Manager</p>
+            </a>
+        </div>
+        <!-- ACCOUNT BOX END -->
+
+    </aside>
+    <!-- SIDE BLOCK END -->
+
+    <!-- SECTION BLOCK START -->
+    <section>
+        <!-- GREETINGS BOX START -->
+        <article class="greetingsBox">
+            <h2 class="greetingsBox_hi">Hello <span id="account_name" class="greetingsBox_hi_name">Evano</span>
+                &#128075;,</h2>
+        </article>
+        <!-- GREETINGS BOX END -->
+
+        <!-- DASHBOARD BOX START -->
+        <article class="dashboardBox">
+            <!-- dashboard TOP part START -->
+            <div class="dashboardBox_top">
+                <div class="dashboardBox_top_left">
+                    <h3>All Customers</h3>
+                    <span id="active_members">Active Members</span>
+                </div>
+                <div class="dashboardBox_top_right">
+                    <label for="search_field">
+                        <input type="search" name="search_field" id="search_field" placeholder="Search">
+                        <img src="./images/search-icon.png" alt="search icon">
+                    </label>
+                </div>
+            </div>
+            <!-- dashboard TOP part START -->
+
+            <!-- dashboard MIDDLE part START -->
+            <div class="dashboardBox_middle">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Customer Name</th>
+                            <th>Company</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>(225) 555-0118</td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-green">Active</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Floyd Miles</td>
+                            <td>Yahoo</td>
+                            <td>(205) 555-0100</td>
+                            <td>floyd@yahoo.com</td>
+                            <td>Kiribati</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-red">Inactive</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Ronald Richards</td>
+                            <td>Adobe</td>
+                            <td>(302) 555-0107</td>
+                            <td>ronald@adobe.com</td>
+                            <td>Israel</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-red">Inactive</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Marvin McKinney</td>
+                            <td>Tesla</td>
+                            <td>(252) 555-0126</td>
+                            <td>marvin@tesla.com</td>
+                            <td>Iran</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-green">Active</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Jerome Bell</td>
+                            <td>Google</td>
+                            <td>(629) 555-0129</td>
+                            <td>jerome@google.com</td>
+                            <td>Réunion</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-green">Active</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Kathryn Murphy</td>
+                            <td>Microsoft</td>
+                            <td>(406) 555-0120</td>
+                            <td>kathryn@microsoft.com</td>
+                            <td>Curaçao</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-green">Active</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Jacob Jones</td>
+                            <td>Yahoo</td>
+                            <td>(208) 555-0112</td>
+                            <td>jacob@yahoo.com</td>
+                            <td>Brazil</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-green">Active</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Kristin Watson</td>
+                            <td>Facebook</td>
+                            <td>(704) 555-0127</td>
+                            <td>kristin@facebook.com</td>
+                            <td>Åland Islands</td>
+                            <td class="userStatusStyle">
+                                <span class="userStatusStyle-red">Inactive</span>
+                            <td></td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- dashboard MIDDLE part START -->
+
+            <!-- dashboard BOTTOM part START -->
+            <div class="dashboardBox_bottom">
+                <div class="dashboardBox_bottom_left">
+                    <p>Showing data <span id="customer_list_pageFrom">1</span> to <span
+                            id="customer_list_pageTo">8</span> of <span id="customer_list_recordCount">256K</span>
+                        entries</p>
+                </div>
+                <div class="dashboardBox_bottom_right">
+                    <button disabled>&lt</button>
+                    <button id="page_1" class="current-page">1</button>
+                    <button id="page_2">2</button>
+                    <button id="page_3">3</button>
+                    <button id="page_4">4</button>
+                    <span>...</span>
+                    <button id="page_5">40</button>
+                    <button>&gt</button>
+                </div>
+            </div>
+            <!-- dashboard BOTTOM part START -->
+        </article>
+        <!-- DASHBOARD BOX END -->
+    </section>
+    <!-- SECTION BLOCK END -->
+</body>
+
+</html>

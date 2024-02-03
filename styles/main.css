@@ -162,7 +162,7 @@ table {
     display: flex;
     flex-flow: column nowrap;
     position: absolute;
-    justify-content: start;
+    justify-content: flex-start;
     overflow: hidden;
     transition: width 0.5s;
     z-index: 11;
@@ -172,7 +172,7 @@ table {
     height: 30px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 15px 0 30px 26px;
   }
   aside .logoBox_link {
@@ -532,7 +532,7 @@ table {
     display: flex;
     flex-flow: column nowrap;
     position: absolute;
-    justify-content: start;
+    justify-content: flex-start;
     overflow: hidden;
     transition: width 1s;
     z-index: 11;
@@ -542,7 +542,7 @@ table {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 15px 0 30px 26px;
   }
   aside .logoBox_link {
@@ -889,7 +889,7 @@ table {
     display: flex;
     flex-flow: column nowrap;
     position: absolute;
-    justify-content: start;
+    justify-content: flex-start;
     overflow: hidden;
     transition: width 1s;
     z-index: 11;
@@ -899,7 +899,7 @@ table {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 15px 0 30px 25px;
   }
   aside .logoBox_link {
@@ -1231,14 +1231,14 @@ table {
     padding: 25px 28px 40px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
+    justify-content: flex-start;
   }
   aside .logoBox {
     width: 220px;
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin-bottom: 30px;
     margin: 0 0 30px 7px;
   }
@@ -1553,14 +1553,14 @@ table {
     padding: 25px 28px 40px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
+    justify-content: flex-start;
   }
   aside .logoBox {
     width: 220px;
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 0 0 30px 7px;
   }
   aside .logoBox_link {
@@ -1869,4 +1869,4 @@ body {
   flex-flow: row nowrap;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   width: 100%;
-}/*# sourceMappingURL=main.css.map */
+}
